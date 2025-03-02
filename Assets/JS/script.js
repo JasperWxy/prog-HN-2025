@@ -6,6 +6,7 @@ nameButton.onclick = function() {
     const lastName = prompt('Entrez votre nom :');
     alert(`Bonjour, ${firstName} ${lastName}`);
 };
+document.body.appendChild(nameButton);
 
 // Créer le bouton "afficher l'aide"
 const helpButton = document.createElement('button');
