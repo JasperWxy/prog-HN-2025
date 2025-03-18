@@ -64,7 +64,38 @@ helpButton.onclick = function() {
 // Ajouter les boutons au body
 document.body.appendChild(nameButton);
 document.body.appendChild(helpButton);
+
+function exercice4() {
+    let texte = document.getElementById("texteExercice4").value;
+    let tokens = texte.split(" ");
+    let table = document.createElement("table");
+    tokens.forEach(mot => {
+        let row = document.createElement("tr");
+        row.innerHTML = mot;
+        table.appendChild(row);
+    });
+    document.getElementById("exercice4Resultat").appendChild(table);
+}
 </script>
+
+<h3 class="has-background-info has-text-white">Exercice 4</h3>
+                    <br/>
+                    <p>Découpez le texte suivants en mots (selon des espaces) puis créer un tableau en utilisant la construction forEach.</p>
+                    <br/>
+                    <p>Pour créer le résultat final vous pouvez au choix :</p>
+                    <ul>
+                        <li>• générer un chaîne de caractères ;</li>
+                        <li>• utiliser les méthodes "<a href="https://www.w3schools.com/jsref/met_document_createelement.asp">createElement</a>" et "<a href="https://www.w3schools.com/jsref/met_node_appendchild.asp">appendChild</a>".</li>
+                    </ul>
+                    <br/>
+                    <p>Écrivez les résultat dans le div d'identifiant "exercice4Resultat".</p>
+                    <br/>
+                    <textarea id="texteExercice4" name="mon_texte" rows="10" cols="50">Ici, on entre du texte qu'on va segmenter en "mots".</textarea>
+                    <br/>
+                    <button onclick="exercice4()">Segmenter le texte dans un tableau.</button>
+                    <div id="exercice4Resultat"></div>
+
+
 
 <footer>
   <p><a href="https://www.univ-paris3.fr/">Lien vers le site de Sorbonne Nouvelle.</a></p>
